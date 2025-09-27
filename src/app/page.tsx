@@ -64,7 +64,7 @@ export default function Home() {
                 The Daily Chronicle
               </h1>
               <p className="mt-2 text-lg text-white/70">
-                Saturday, September 27, 2025 • Volume 127, Issue 42
+                Saturday, September 27, 2025 • Regulatory Edition
               </p>
             </div>
             <div className="hidden md:block">
@@ -85,43 +85,45 @@ export default function Home() {
           <div className="lg:col-span-8">
             <article className="mb-12">
               <div className="mb-6">
-                <span className="inline-block rounded-full bg-red-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-400">
-                  Breaking News
+                <span className="inline-block rounded-full bg-green-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-400">
+                  Regulatory Victory
                 </span>
               </div>
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
-                Revolutionary Coffee Pool System Launches in Web3
+                Major Breakthrough: SEC Approves First Bitcoin ETF
               </h2>
               <p className="mb-6 text-lg text-white/70 leading-relaxed">
-                A groundbreaking new platform allows coffee enthusiasts to participate in decentralized
-                group purchases using PYUSD stablecoin. The innovative system creates fair distribution
-                pools where participants can join for just 1 PYUSD and have equal chances of winning
-                premium coffee selections.
+                In a landmark decision, the Securities and Exchange Commission has granted approval for the first
+                Bitcoin exchange-traded fund, paving the way for institutional investors to gain exposure to
+                cryptocurrency through traditional markets. This regulatory green light is expected to bring
+                billions in new investment to the digital asset space.
               </p>
               <div className="flex items-center gap-4 text-sm text-white/60">
-                <span>By Crypto Reporter</span>
+                <span>By Financial Reporter</span>
                 <span>•</span>
-                <span>2 hours ago</span>
+                <span>3 hours ago</span>
               </div>
             </article>
 
             <div className="grid gap-8 md:grid-cols-2">
               <article>
                 <h3 className="mb-3 text-xl font-semibold text-white">
-                  Local Economy Sees Boost from DeFi Adoption
+                  EU Parliament Passes Comprehensive Crypto Regulation Framework
                 </h3>
                 <p className="text-white/70">
-                  Small businesses report increased revenue as cryptocurrency payments become more mainstream.
-                  Local coffee shops are leading the charge in adopting digital currencies.
+                  European lawmakers have approved MiCA (Markets in Crypto-Assets) regulation, creating a unified
+                  framework for cryptocurrency operations across all EU member states. The legislation provides
+                  much-needed clarity for businesses and consumers in the digital asset space.
                 </p>
               </article>
               <article>
                 <h3 className="mb-3 text-xl font-semibold text-white">
-                  Weather Update: Perfect Conditions for Coffee Growing
+                  Singapore Grants First Digital Asset Banking Licenses
                 </h3>
                 <p className="text-white/70">
-                  Favorable monsoon patterns this season promise exceptional harvests from traditional
-                  growing regions across South India and Ethiopia.
+                  The Monetary Authority of Singapore has issued full banking licenses to two cryptocurrency
+                  platforms, marking a significant milestone in the integration of traditional finance with
+                  digital assets. This move establishes Singapore as a global leader in crypto regulation.
                 </p>
               </article>
             </div>
@@ -129,40 +131,40 @@ export default function Home() {
 
           {/* Right Column - Sidebar & Ads */}
           <div className="lg:col-span-4 space-y-8">
-            {/* Weather Widget */}
+            {/* Crypto Market Widget */}
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-              <h3 className="mb-4 text-lg font-semibold text-white">Today's Weather</h3>
+              <h3 className="mb-4 text-lg font-semibold text-white">Crypto Market Update</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-white/70">Temperature</span>
-                  <span className="text-white">72°F</span>
+                  <span className="text-white/70">Bitcoin ETF</span>
+                  <span className="text-green-400">+15.2%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/70">Conditions</span>
-                  <span className="text-white">Partly Cloudy</span>
+                  <span className="text-white/70">Ethereum</span>
+                  <span className="text-green-400">+8.7%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/70">Perfect for</span>
-                  <span className="text-white">☕ Coffee</span>
+                  <span className="text-white/70">PYUSD Stable</span>
+                  <span className="text-green-400">+0.1%</span>
                 </div>
               </div>
             </div>
 
-            {/* Stock Market */}
+            {/* Regulatory Progress */}
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-              <h3 className="mb-4 text-lg font-semibold text-white">Market Update</h3>
+              <h3 className="mb-4 text-lg font-semibold text-white">Regulatory Progress</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-white/70">PYUSD</span>
-                  <span className="text-green-400">+2.1%</span>
+                  <span className="text-white/70">Countries with Crypto Laws</span>
+                  <span className="text-white">47</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/70">BTC</span>
-                  <span className="text-green-400">+1.8%</span>
+                  <span className="text-white/70">CBDCs in Development</span>
+                  <span className="text-white">18</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/70">ETH</span>
-                  <span className="text-green-400">+3.2%</span>
+                  <span className="text-white/70">Licensed Exchanges</span>
+                  <span className="text-white">200+</span>
                 </div>
               </div>
             </div>
@@ -229,26 +231,29 @@ export default function Home() {
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           <article>
             <h3 className="mb-3 text-lg font-semibold text-white">
-              Coffee Culture Evolution
+              UK Treasury Advances Digital Pound Plans
             </h3>
             <p className="text-sm text-white/70">
-              How blockchain technology is revolutionizing the coffee industry, from bean to cup.
+              The British government announces consultation on a central bank digital currency, positioning
+              the UK at the forefront of digital finance innovation with potential launch by 2025.
             </p>
           </article>
           <article>
             <h3 className="mb-3 text-lg font-semibold text-white">
-              Sustainable Sourcing Trends
+              Australia Recognizes Crypto as Regulated Financial Product
             </h3>
             <p className="text-sm text-white/70">
-              New initiatives ensure fair trade practices and environmental responsibility in coffee production.
+              Australian securities regulator grants crypto exchanges licensing under existing financial
+              services laws, providing consumer protection and market stability for digital assets.
             </p>
           </article>
           <article>
             <h3 className="mb-3 text-lg font-semibold text-white">
-              Smart Contracts in Commerce
+              Japan Expands Crypto Tax Incentives for Businesses
             </h3>
             <p className="text-sm text-white/70">
-              Automated agreements are streamlining transactions and building trust in digital marketplaces.
+              New tax reforms in Japan reduce corporate tax rates for cryptocurrency businesses,
+              encouraging innovation and investment in the digital economy sector.
             </p>
           </article>
         </div>
