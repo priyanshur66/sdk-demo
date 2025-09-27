@@ -8,8 +8,8 @@ const RPC_URL = "https://ethereum-sepolia-rpc.publicnode.com";
 const NETWORK = "testnet";
 const HOUSE_RECIPIENT = "0x64cBdcCfa295a0dB0187E5Ef7fAC28205908B4e4";
 
-const shortenAddress = (address) => {
-  if (!address || address.length < 10) return address;
+const shortenAddress = (address: string | null | undefined): string => {
+  if (!address || address.length < 10) return address || "";
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
 };
 
@@ -40,7 +40,7 @@ export default function Home() {
         amount: "100",
       });
 
-      const broadcast = await client.broadcastTransaction(signedTx);
+      await client.broadcastTransaction(signedTx);
 
       alert("House purchase successful! Welcome to your new home!");
     } catch (err) {

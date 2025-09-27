@@ -15,8 +15,8 @@ const initialPools = [
     recipient: "0x64cBdcCfa295a0dB0187E5Ef7fAC28205908B4e4",
     entries: 0,
     capacity: 6,
-    participants: [],
-    lastWinner: null,
+    participants: [] as string[],
+    lastWinner: null as string | null,
     status: "Filling",
   },
   {
@@ -26,8 +26,8 @@ const initialPools = [
     recipient: "0x64cBdcCfa295a0dB0187E5Ef7fAC28205908B4e4",
     entries: 0,
     capacity: 6,
-    participants: [],
-    lastWinner: null,
+    participants: [] as string[],
+    lastWinner: null as string | null,
     status: "Filling",
   },
   {
@@ -37,8 +37,8 @@ const initialPools = [
     recipient: "0x64cBdcCfa295a0dB0187E5Ef7fAC28205908B4e4",
     entries: 0,
     capacity: 6,
-    participants: [],
-    lastWinner: null,
+    participants: [] as string[],
+    lastWinner: null as string | null,
     status: "Filling",
   },
   {
@@ -48,8 +48,8 @@ const initialPools = [
     recipient: "0x64cBdcCfa295a0dB0187E5Ef7fAC28205908B4e4",
     entries: 0,
     capacity: 6,
-    participants: [],
-    lastWinner: null,
+    participants: [] as string[],
+    lastWinner: null as string | null,
     status: "Filling",
   },
   {
@@ -59,14 +59,14 @@ const initialPools = [
     recipient: "0x64cBdcCfa295a0dB0187E5Ef7fAC28205908B4e4",
     entries: 0,
     capacity: 6,
-    participants: [],
-    lastWinner: null,
+    participants: [] as string[],
+    lastWinner: null as string | null,
     status: "Filling",
   },
 ];
 
-const shortenAddress = (address) => {
-  if (!address || address.length < 10) return address;
+const shortenAddress = (address: string | null | undefined): string => {
+  if (!address || address.length < 10) return address || "";
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
 };
 
@@ -95,7 +95,7 @@ export default function PoolsPage() {
   );
 
   const handleJoinPool = useCallback(
-    async (pool) => {
+    async (pool: typeof initialPools[0]) => {
       if (isProcessing) return;
       setIsProcessing(true);
 
@@ -119,7 +119,7 @@ export default function PoolsPage() {
           amount: "1",
         });
 
-        const broadcast = await client.broadcastTransaction(signedTx);
+        await client.broadcastTransaction(signedTx);
 
         setPools((prev) =>
           prev.map((p) => {
@@ -151,7 +151,7 @@ export default function PoolsPage() {
     [isProcessing]
   );
 
-  const handleSelectWinner = useCallback((pool) => {
+  const handleSelectWinner = useCallback((pool: typeof initialPools[0]) => {
     if (pool.participants.length < pool.capacity) return;
 
     const winnerIndex = Math.floor(Math.random() * pool.participants.length);
